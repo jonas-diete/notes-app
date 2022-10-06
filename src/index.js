@@ -1,6 +1,7 @@
 const Notes = require('./notesModel');
-const notes = new Notes();
-notes.addNote('Find cardboard.');
+const NotesView = require('./notesView');
 
-console.log('The notes app is running.');
-console.log('The current list is: ' + notes.getNotes());
+const notes = new Notes();
+const view = new NotesView(notes);
+
+
